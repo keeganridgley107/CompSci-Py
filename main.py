@@ -1,5 +1,6 @@
-# Queue /BST /stack /heap /LL /hash table
-
+"""
+Python data structures and algo practice 
+"""
 
 class Node:
     """
