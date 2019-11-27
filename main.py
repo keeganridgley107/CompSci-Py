@@ -74,29 +74,33 @@ def queue_remove():
 
     return data
 
+
 """
 Stack FIFO data structure with flexible sizing 
 """
 
-top_node = None # global var for stack 
+top_node = None  # global var for stack
+
 
 def stack_is_empty():
-	pass
+    global top_node
+    return (top_node == None)
 
 
 def stack_peek():
-	pass
+    pass
 
 
 def stack_push():
-	pass
+    pass
 
 
 def stack_pop():
-	pass
+    pass
 
 
 ##################################
+
 
 def queue_run():
     test_node = Node(24)
@@ -121,7 +125,8 @@ def queue_run():
 
 
 def stack_run():
-	pass
+    pass
+
 
 def binary_search_tree_run():
     """
@@ -162,10 +167,12 @@ def binary_search_tree_run():
 
 #################################
 
+
 def main():
     queue_run()
-	stack_run()
+    stack_run()
     binary_search_tree_run()
+
 
 if (__name__ == "__main__"):
     main()
