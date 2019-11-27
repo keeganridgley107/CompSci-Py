@@ -2,6 +2,7 @@
 Python data structures and algo practice 
 """
 
+
 class Node:
     """
 	Basic node object type
@@ -65,13 +66,21 @@ def queue_add(data):
 
 def queue_remove():
     global head_node, tail_node  # pull global vars into scope to update values
-    
+
     data = head_node.data
     head_node = head_node.next_node
     if (head_node == None):
         tail_node = None
-        
+
     return data
+
+"""
+Stack FIFO data structure with flexible sizing 
+"""
+
+
+
+
 
 
 def queue_run():
@@ -89,10 +98,15 @@ def queue_run():
     queue_add(6)
     print("Now if we run remove on our queue we get ==> " +
           str(queue_remove()))
-    print("\nThen running it again we get... \n")
+    print("\nThen running it again we get...")
     print("==> " + str(queue_remove()))
     print("==> " + str(queue_remove()))
     print("==> " + str(queue_remove()))
+    print("\nNow is the queue empty? ", queue_is_empty())
+
+
+def stack_run():
+	pass
 
 
 def binary_search_tree_run():
@@ -134,8 +148,8 @@ def binary_search_tree_run():
 
 def main():
     queue_run()
+	stack_run()
     binary_search_tree_run()
-
 
 if (__name__ == "__main__"):
     main()
