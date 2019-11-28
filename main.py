@@ -92,9 +92,14 @@ def stack_peek():
 
 
 def stack_push(data):
+    global top_node # grab global top_node to update 
     new_node = Node(data) # make new node 
-    new_node.next_node = top_node # set new_node to point to old top node
-    top_node.next_node = new_node # set new_node to be new top node 
+
+    if (top_node == None):
+        top_node = new_node
+    else:
+        top_node.next_node = new_node # set new_node to be new top node 
+        top_node = new_node
 
 
 def stack_pop():
@@ -132,7 +137,17 @@ def queue_run():
 
 def stack_run():
     print("\n\n Let's make a stack! \n")
-    print(stack_is_empty())
+    print("start with an empty stack... \n", stack_peek())
+    print("Now let's push a few nodes onto the stack...")
+    stack_push(32)
+    stack_push(80)
+    stack_push(443)
+    stack_push(8080)
+    print("\nNow when we run is_empty() it returns...\n==> ", stack_is_empty())
+    print("\nNow lets pop the nodes off the stack...")
+
+
+
 
 
 def binary_search_tree_run():
