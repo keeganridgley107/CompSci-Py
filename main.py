@@ -91,12 +91,17 @@ def stack_peek():
         return head_node.data
 
 
-def stack_push():
-    pass
+def stack_push(data):
+    new_node = Node(data) # make new node 
+    new_node.next_node = top_node # set new_node to point to old top node
+    top_node.next_node = new_node # set new_node to be new top node 
 
 
 def stack_pop():
-    pass
+    global top_node # get global top node to update 
+    data = top_node.data
+    top_node = top_node.next_node
+    reeturn data
 
 
 ##################################
