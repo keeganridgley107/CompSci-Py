@@ -28,12 +28,8 @@ FIFO Linear data structure with flexible sizing
 """
 
 # asign H/T to null objects to make logic easier
-head_node = None
-# remove nodes here
-
-tail_node = None
-
-# add nodes here
+head_node = None # remove nodes here
+tail_node = None # add nodes here
 
 
 def queue_is_empty():
@@ -76,19 +72,23 @@ def queue_remove():
 
 
 """
-Stack FIFO data structure with flexible sizing 
+Stack 
+
+FIFO data structure with flexible sizing 
 """
 
 top_node = None  # global var for stack
 
 
 def stack_is_empty():
-    global top_node
     return (top_node == None)
 
 
 def stack_peek():
-    pass
+    if top_node == None:
+        return "error msg: queue is empty"
+    else:
+        return head_node.data
 
 
 def stack_push():
