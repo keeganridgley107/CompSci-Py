@@ -21,8 +21,9 @@ class Node:
         self.next_node = next_node
 
 ########################################## 
-# STACK class example
+# example of a stack implementation using a stack class 
 
+''' 
 class EmptyStackException(Exception):
     pass
 
@@ -49,7 +50,8 @@ class Stack(object):
         return self.head.value
 
     def is_empty(self) -> bool:
-        return self.head is None
+        return self.head is None 
+'''
 
 ########################################## 
 
@@ -164,8 +166,8 @@ def queue_run():
 
 def stack_run():
     print("\n\n Let's make a stack! \n")
-    print("start with an empty stack... \n", stack_peek())
-    print("Now let's push a few nodes onto the stack... 32, 80, 443, 8080")
+    print("Lets peek our stack to make sure its empty... \n", stack_peek())
+    print("\nNow let's push a few nodes onto the stack... 32, 80, 443, 8080")
     
     stack_push(32)
     stack_push(80)
@@ -178,11 +180,7 @@ def stack_run():
     print(stack_pop())
     print(stack_pop())
     print(stack_pop())
-    
-
-
-
-
+    print("\nNow when we check if the stack is empty it returns...\n", stack_is_empty())
 
 
 def binary_search_tree_run():
