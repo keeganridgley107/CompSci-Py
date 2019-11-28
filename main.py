@@ -101,7 +101,7 @@ def stack_pop():
     global top_node # get global top node to update 
     data = top_node.data
     top_node = top_node.next_node
-    reeturn data
+    return data
 
 
 ##################################
