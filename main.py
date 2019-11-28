@@ -86,9 +86,9 @@ def stack_is_empty():
 
 def stack_peek():
     if top_node == None:
-        return "error msg: queue is empty"
+        return "error msg: stack is empty"
     else:
-        return head_node.data
+        return top_node.data
 
 
 def stack_push(data):
@@ -98,9 +98,10 @@ def stack_push(data):
 
 
 def stack_pop():
-    global top_node # get global top node to update 
-    data = top_node.data
-    top_node = top_node.next_node
+    global top_node # get global top node to update
+
+    data = top_node.data # top_node data to return 
+    top_node = top_node.next_node # remove top node from stack
     return data
 
 
@@ -130,7 +131,8 @@ def queue_run():
 
 
 def stack_run():
-    pass
+    print("\n\n Let's make a stack! \n")
+    print(stack_is_empty())
 
 
 def binary_search_tree_run():
